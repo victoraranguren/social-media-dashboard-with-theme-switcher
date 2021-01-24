@@ -1,4 +1,4 @@
-.container {
+.container, .main {
   width: 90%;
   margin: 0 auto;
 }
@@ -35,7 +35,7 @@ body {
   font-weight: 400;
 }
 
-.header, .header .container {
+.header, .header .container, .header .main {
   display: flex;
   flex-direction: column;
   background: #f5f7ff;
@@ -74,6 +74,41 @@ body {
   background: #f5f7ff;
   border-radius: 50%;
   transition: 500ms ease all;
+}
+
+.overview, .overview-all {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.overview-all .overview-card {
+  width: 100%;
+  background: #f5f7ff;
+  border-radius: 8px;
+}
+.overview-all .facebook {
+  display: inline-block;
+  width: 100%;
+  height: 0.625rem;
+  background: #198ff5;
+}
+.overview-all .instagram {
+  display: inline-block;
+  width: 100%;
+  height: 0.625rem;
+  background: linear-gradient(to right, #fdc468, #df4996);
+}
+.overview-all .twitter {
+  display: inline-block;
+  width: 100%;
+  height: 0.625rem;
+  background: #1ca0f2;
+}
+.overview-all .youtube {
+  display: inline-block;
+  width: 100%;
+  height: 0.625rem;
+  background: #c4032a;
 }
 
 /*# sourceMappingURL=custom.css.map */

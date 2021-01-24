@@ -1,0 +1,29 @@
+.container{
+  width: 90%;
+  margin: 0 auto;
+}
+// Title
+.title{
+  font-weight: 700;
+  font-size: 1.5em;
+  color: $dark-grayish-blue;
+  &-sm{
+    @extend .title;
+    font-size: 1em;
+    color: $dark-grayish-blue;
+  }
+  &-lg{
+    @extend .title;
+    font-size: 1.75em;
+    color: $very-dark-blue;
+  }
+}
+.text{
+  font-weight: 400;
+  font-size: 1em;
+  color: $dark-grayish-blue;
+  &-sm{
+    @extend .text;
+    font-size: .75em;
+  }
+}

@@ -1,7 +1,48 @@
 @import "_variables/variables";
 @import "_mixins/mixins";
+@import "_utilities/utilities";
 
 body{
   font-family: 'Inter', 'Open Sans', sans-serif;
   font-weight: 400;
+}
+// Header
+.header{
+  display: flex;
+  flex-direction: column;
+  background: $very-pale-blue;
+  padding-bottom: 3em;
+  border-bottom-right-radius: 2em;
+  border-bottom-left-radius: 2em;
+  .container{
+    @extend .header;
+  }
+}
+// Toggle
+.toggle{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-text{
+    @extend .text;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  &-btn{
+    display: inline-block;
+    width: 4em;
+    height: 2em;
+    border-radius: 3em;
+    background: $toggle;
+  }
+  &-ball{
+    position: relative;
+    left: 2.125rem;
+    top: 0.25rem;
+    display: inline-block;
+    height: 1.5em;
+    width: 1.5em;
+    background: $very-pale-blue;
+    border-radius: 50%;
+  }
 }

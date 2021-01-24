@@ -2,6 +2,9 @@
 @import "_mixins/mixins";
 @import "_utilities/utilities";
 
+*{
+  box-sizing: border-box;
+}
 body{
   font-family: 'Inter', 'Open Sans', sans-serif;
   font-weight: 400;
@@ -29,20 +32,26 @@ body{
     text-decoration: none;
   }
   &-btn{
-    display: inline-block;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     width: 4em;
     height: 2em;
     border-radius: 3em;
     background: $toggle;
+    transition: 500ms ease all;
+    &.active{
+      justify-content: flex-start;
+      transition: 500ms ease all;
+    }
   }
   &-ball{
-    position: relative;
-    left: 2.125rem;
-    top: 0.25rem;
     display: inline-block;
     height: 1.5em;
     width: 1.5em;
+    margin: 0 5px;
     background: $very-pale-blue;
     border-radius: 50%;
+    transition: 500ms ease all;
   }
 }

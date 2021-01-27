@@ -15,8 +15,8 @@ body{
   flex-direction: column;
   background: $very-pale-blue;
   padding-bottom: 3em;
-  border-bottom-right-radius: 2em;
-  border-bottom-left-radius: 2em;
+  border-bottom-right-radius: 1.75em;
+  border-bottom-left-radius: 1.75em;
   .container{
     @extend .header;
   }
@@ -66,10 +66,64 @@ body{
   flex-direction: column;
   &-all{
     @extend .overview;
+    position: relative;
+    top: -3em;
     .overview-card{
+      display: flex;
+      text-align: center;
+      flex-direction: column;
       width: 100%;
       background: $very-pale-blue;
       border-radius: 8px;
+      padding-bottom: 1em;
+      margin-bottom: 1.75em;
+    }
+    .account{
+      display: flex;
+      align-items: center;
+      margin: 2em auto 1.25em auto;
+      line-height: 1em;
+      text-decoration: none;
+    }
+    .icon{
+      display: inline-block;
+      width: auto;
+      height: 100%;
+    }
+    .name{
+      display: inline-block;
+      margin: 0;
+      margin-left: .75em;
+      text-decoration: none;
+      color: $dark-grayish-blue;
+      font-weight: 600;
+    }
+    .counter{
+      font-size: 4em;
+      font-weight: 700;
+      margin: 0;
+    }
+    .followers{
+      font-size: 1em;
+      font-weight: 300;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+    }
+    .resume-day{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .counter-day{
+        display: inline-block;
+        font-weight: 600;
+        color: $lime-green;
+        margin-left: .25em;
+      }
+      .arrow{
+        display: inline-block;
+        width: auto;
+        height: 100%;
+      }
     }
     .facebook{
       display: inline-block;

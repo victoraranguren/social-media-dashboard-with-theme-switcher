@@ -26,6 +26,10 @@
   font-size: 0.75em;
 }
 
+.color-red {
+  color: #dc414c !important;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -40,8 +44,8 @@ body {
   flex-direction: column;
   background: #f5f7ff;
   padding-bottom: 3em;
-  border-bottom-right-radius: 2em;
-  border-bottom-left-radius: 2em;
+  border-bottom-right-radius: 1.75em;
+  border-bottom-left-radius: 1.75em;
 }
 .toggle {
   display: flex;
@@ -81,10 +85,66 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+.overview-all {
+  position: relative;
+  top: -3em;
+}
 .overview-all .overview-card {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
   width: 100%;
   background: #f5f7ff;
   border-radius: 8px;
+  padding-bottom: 1em;
+  margin-bottom: 1.75em;
+}
+.overview-all .account {
+  display: flex;
+  align-items: center;
+  margin: 2em auto 1.25em auto;
+  line-height: 1em;
+  text-decoration: none;
+}
+.overview-all .icon {
+  display: inline-block;
+  width: auto;
+  height: 100%;
+}
+.overview-all .name {
+  display: inline-block;
+  margin: 0;
+  margin-left: 0.75em;
+  text-decoration: none;
+  color: #63687e;
+  font-weight: 600;
+}
+.overview-all .counter {
+  font-size: 4em;
+  font-weight: 700;
+  margin: 0;
+}
+.overview-all .followers {
+  font-size: 1em;
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+.overview-all .resume-day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overview-all .resume-day .counter-day {
+  display: inline-block;
+  font-weight: 600;
+  color: #1db489;
+  margin-left: 0.25em;
+}
+.overview-all .resume-day .arrow {
+  display: inline-block;
+  width: auto;
+  height: 100%;
 }
 .overview-all .facebook {
   display: inline-block;

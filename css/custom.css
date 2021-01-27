@@ -80,7 +80,7 @@ body {
   transition: 500ms ease all;
 }
 
-.overview, .overview-all {
+.overview, .overview-today, .overview-all {
   display: flex;
   justify-content: center;
   flex-direction: column;

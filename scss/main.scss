@@ -64,6 +64,7 @@ body{
   display: flex;
   justify-content: center;
   flex-direction: column;
+  // Overview All
   &-all{
     @extend .overview;
     position: relative;
@@ -157,5 +158,9 @@ body{
       border-top-left-radius:1em;
       border-top-right-radius:1em;
     }
+  }
+  // Overview Today
+  &-today{
+    @extend .overview;
   }
 }

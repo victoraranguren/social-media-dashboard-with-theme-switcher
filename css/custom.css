@@ -29,6 +29,9 @@
 .color-red {
   color: #dc414c !important;
 }
+.color-gray, .overview-today h2 {
+  color: #63687e !important;
+}
 
 * {
   box-sizing: border-box;
@@ -85,6 +88,32 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+.overview .overview-card-template, .overview-today .overview-card-template, .overview-today .overview-card, .overview-all .overview-card-template, .overview-all .overview-card {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+  background: #f5f7ff;
+  border-radius: 8px;
+  padding-bottom: 1em;
+  margin-bottom: 1.75em;
+}
+.overview .overview-card-template .resume-day-template, .overview-today .overview-card-template .resume-day-template, .overview-today .overview-card .resume-day-template, .overview-today .overview-card .resume-day, .overview .overview-card-template .overview-all .resume-day, .overview-today .overview-card-template .overview-all .resume-day, .overview-all .overview-card-template .resume-day-template, .overview-all .overview-card-template .resume-day, .overview-all .overview-card .resume-day-template, .overview-all .overview-card .resume-day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overview .overview-card-template .resume-day-template .counter-day, .overview-today .overview-card-template .resume-day-template .counter-day, .overview-today .overview-card .resume-day-template .counter-day, .overview-today .overview-card .resume-day .counter-day, .overview .overview-card-template .overview-all .resume-day .counter-day, .overview-today .overview-card-template .overview-all .resume-day .counter-day, .overview-all .overview-card-template .resume-day-template .counter-day, .overview-all .overview-card-template .resume-day .counter-day, .overview-all .overview-card .resume-day-template .counter-day, .overview-all .overview-card .resume-day .counter-day {
+  display: inline-block;
+  font-weight: 600;
+  color: #1db489;
+  margin-left: 0.25em;
+}
+.overview .overview-card-template .resume-day-template .arrow, .overview-today .overview-card-template .resume-day-template .arrow, .overview-today .overview-card .resume-day-template .arrow, .overview-today .overview-card .resume-day .arrow, .overview .overview-card-template .overview-all .resume-day .arrow, .overview-today .overview-card-template .overview-all .resume-day .arrow, .overview-all .overview-card-template .resume-day-template .arrow, .overview-all .overview-card-template .resume-day .arrow, .overview-all .overview-card .resume-day-template .arrow, .overview-all .overview-card .resume-day .arrow {
+  display: inline-block;
+  width: auto;
+  height: 100%;
+}
 .overview-all {
   position: relative;
   top: -3em;
@@ -130,22 +159,6 @@ body {
   letter-spacing: 0.25em;
   text-transform: uppercase;
 }
-.overview-all .resume-day {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.overview-all .resume-day .counter-day {
-  display: inline-block;
-  font-weight: 600;
-  color: #1db489;
-  margin-left: 0.25em;
-}
-.overview-all .resume-day .arrow {
-  display: inline-block;
-  width: auto;
-  height: 100%;
-}
 .overview-all .facebook {
   display: inline-block;
   width: 100%;
@@ -177,6 +190,40 @@ body {
   background: #c4032a;
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
+}
+.overview-today {
+  position: relative;
+  top: -3em;
+}
+.overview-today h2 {
+  margin: 1.25em 0;
+  font-size: 1.5em;
+}
+.overview-today .overview-card {
+  padding: 0 1.75em;
+}
+.overview-today .overview-card > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.overview-today .overview-card .name {
+  margin: 2em 0 1em 0;
+}
+.overview-today .overview-card .text, .overview-today .overview-card .text-sm, .overview-today .overview-card .toggle-text {
+  display: inline-block;
+  font-weight: 600;
+  margin: 0;
+}
+.overview-today .overview-card .icon {
+  display: inline-block;
+  width: auto;
+  height: 100%;
+}
+.overview-today .overview-card .number {
+  font-size: 2em;
+  font-weight: 600;
+  margin: 0.5em 0;
 }
 
 /*# sourceMappingURL=custom.css.map */

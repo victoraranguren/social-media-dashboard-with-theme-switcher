@@ -64,12 +64,39 @@ body{
   display: flex;
   justify-content: center;
   flex-direction: column;
+  .overview-card-template{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    background: $very-pale-blue;
+    border-radius: 8px;
+    padding-bottom: 1em;
+    margin-bottom: 1.75em;
+    .resume-day-template{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .counter-day{
+        display: inline-block;
+        font-weight: 600;
+        color: $lime-green;
+        margin-left: .25em;
+      }
+      .arrow{
+        display: inline-block;
+        width: auto;
+        height: 100%;
+      }
+    }
+  }
   // Overview All
   &-all{
     @extend .overview;
     position: relative;
     top: -3em;
     .overview-card{
+      @extend .overview-card-template;
       display: flex;
       text-align: center;
       flex-direction: column;
@@ -111,20 +138,7 @@ body{
       text-transform: uppercase;
     }
     .resume-day{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .counter-day{
-        display: inline-block;
-        font-weight: 600;
-        color: $lime-green;
-        margin-left: .25em;
-      }
-      .arrow{
-        display: inline-block;
-        width: auto;
-        height: 100%;
-      }
+      @extend .resume-day-template;
     }
     .facebook{
       display: inline-block;
@@ -162,5 +176,42 @@ body{
   // Overview Today
   &-today{
     @extend .overview;
+    position: relative;
+    top: -3em;
+    h2{
+      @extend .color-gray;
+      margin: 1.25em 0;
+      font-size: 1.5em;
+    }
+    .overview-card{
+      @extend .overview-card-template;
+      padding: 0 1.75em;
+      > div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .name{
+        margin: 2em 0 1em 0;
+      }
+      .text{
+        display: inline-block;
+        font-weight: 600;
+        margin: 0;
+      }
+      .icon{
+        display: inline-block;
+        width: auto;
+        height: 100%;
+      }
+      .resume-day{
+        @extend .resume-day-template;
+      }
+      .number{
+        font-size: 2em;
+        font-weight: 600;
+        margin: .5em 0;
+      }
+    }
   }
 }

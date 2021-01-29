@@ -8,6 +8,7 @@
 body{
   font-family: 'Inter', 'Open Sans', sans-serif;
   font-weight: 400;
+  overflow-x: hidden;
 }
 // Header
 .header{
@@ -62,8 +63,11 @@ body{
 // Overview
 .overview{
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  @include mq($mq, md){
+    flex-direction: row;  
+    justify-content: space-between;
+  }
   .overview-card-template{
     display: flex;
     text-align: center;
@@ -85,8 +89,8 @@ body{
       }
       .arrow{
         display: inline-block;
-        width: auto;
-        height: 100%;
+        width: .5em;
+        height: auto;
       }
     }
   }
@@ -105,6 +109,9 @@ body{
       border-radius: 8px;
       padding-bottom: 1em;
       margin-bottom: 1.75em;
+      @include mq($mq, md){
+        width: 23%;
+      }
     }
     .account{
       display: flex;
@@ -178,7 +185,14 @@ body{
     @extend .overview;
     position: relative;
     top: -3em;
+    @include mq($mq, md){
+      flex-direction: row;  
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
     h2{
+      display: block;
+      width: 100%;
       @extend .color-gray;
       margin: 1.25em 0;
       font-size: 1.5em;
@@ -186,6 +200,9 @@ body{
     .overview-card{
       @extend .overview-card-template;
       padding: 0 1.75em;
+      @include mq($mq, md){
+        width: 23%;
+      }
       > div{
         display: flex;
         justify-content: space-between;

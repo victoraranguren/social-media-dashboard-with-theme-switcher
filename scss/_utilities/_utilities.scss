@@ -8,21 +8,25 @@
   font-weight: 700;
   font-size: 1.5em;
   color: $dark-grayish-blue;
+  @include dark-force($white);
   &-sm{
     @extend .title;
     font-size: 1em;
     color: $dark-grayish-blue;
+    @include dark($dark-grayish-blue);
   }
   &-lg{
     @extend .title;
     font-size: 1.75em;
     color: $very-dark-blue;
+    @include dark($very-dark-blue);
   }
 }
 .text{
   font-weight: 400;
   font-size: 1em;
   color: $dark-grayish-blue;
+  @include dark($dark-grayish-blue);
   &-sm{
     @extend .text;
     font-size: .75em;
@@ -34,5 +38,6 @@
   }
   &-gray{
     color: $dark-grayish-blue!important;
+    @include dark($dark-grayish-blue);
   }
 }

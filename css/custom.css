@@ -8,20 +8,40 @@
   font-weight: 700;
   font-size: 1.5em;
   color: #63687e;
+  transition: 400ms ease all;
+}
+.title.dark, .dark.title-lg, .dark.title-sm {
+  color: white !important;
+  transition: 400ms ease all;
 }
 .title-sm {
   font-size: 1em;
   color: #63687e;
+  transition: 400ms ease all;
+}
+.title-sm.dark {
+  color: #8b97c6;
+  transition: 400ms ease all;
 }
 .title-lg {
   font-size: 1.75em;
   color: #1e202a;
+  transition: 400ms ease all;
+}
+.title-lg.dark {
+  color: white;
+  transition: 400ms ease all;
 }
 
-.text, .toggle-text, .text-sm {
+.text, .overview-all .name, .toggle-text, .text-sm {
   font-weight: 400;
   font-size: 1em;
   color: #63687e;
+  transition: 400ms ease all;
+}
+.text.dark, .overview-all .dark.name, .dark.toggle-text, .dark.text-sm {
+  color: #8b97c6;
+  transition: 400ms ease all;
 }
 .text-sm {
   font-size: 0.75em;
@@ -30,8 +50,13 @@
 .color-red {
   color: #dc414c !important;
 }
-.color-gray, .overview-today h2 {
+.color-gray {
   color: #63687e !important;
+  transition: 400ms ease all;
+}
+.color-gray.dark {
+  color: #8b97c6;
+  transition: 400ms ease all;
 }
 
 * {
@@ -42,6 +67,11 @@ body {
   font-family: "Inter", "Open Sans", sans-serif;
   font-weight: 400;
   overflow-x: hidden;
+  transition: 400ms ease all;
+}
+body.dark {
+  background: #1e202a !important;
+  transition: 400ms ease all;
 }
 
 .header, .header .container, .header .main {
@@ -51,6 +81,17 @@ body {
   padding-bottom: 3em;
   border-bottom-right-radius: 1.75em;
   border-bottom-left-radius: 1.75em;
+  transition: 400ms ease all;
+}
+.header.dark, .header .dark.container, .header .dark.main {
+  background: #1f212e;
+  transition: 400ms ease all;
+}
+@media screen and (min-width: 768px) {
+  .header, .header .container, .header .main {
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+  }
 }
 .toggle {
   display: flex;
@@ -109,6 +150,11 @@ body {
   border-radius: 8px;
   padding-bottom: 1em;
   margin-bottom: 1.75em;
+  transition: 400ms ease all;
+}
+.overview .overview-card-template.dark, .overview-today .overview-card-template.dark, .overview-today .dark.overview-card, .overview-all .overview-card-template.dark, .overview-all .dark.overview-card {
+  background: #252a41 !important;
+  transition: 400ms ease all;
 }
 .overview .overview-card-template .resume-day-template, .overview-today .overview-card-template .resume-day-template, .overview-today .overview-card .resume-day-template, .overview-today .overview-card .resume-day, .overview .overview-card-template .overview-all .resume-day, .overview-today .overview-card-template .overview-all .resume-day, .overview-all .overview-card-template .resume-day-template, .overview-all .overview-card-template .resume-day, .overview-all .overview-card .resume-day-template, .overview-all .overview-card .resume-day {
   display: flex;
@@ -162,19 +208,28 @@ body {
   margin: 0;
   margin-left: 0.75em;
   text-decoration: none;
-  color: #63687e;
   font-weight: 600;
 }
 .overview-all .counter {
   font-size: 4em;
   font-weight: 700;
   margin: 0;
+  transition: 400ms ease all;
+}
+.overview-all .counter.dark {
+  color: white !important;
+  transition: 400ms ease all;
 }
 .overview-all .followers {
   font-size: 1em;
   font-weight: 300;
   letter-spacing: 0.25em;
   text-transform: uppercase;
+  transition: 400ms ease all;
+}
+.overview-all .followers.dark {
+  color: #8b97c6 !important;
+  transition: 400ms ease all;
 }
 .overview-all .facebook {
   display: inline-block;
@@ -219,7 +274,7 @@ body {
     flex-wrap: wrap;
   }
 }
-.overview-today h2 {
+.overview-today .title, .overview-today .title-sm, .overview-today .title-lg {
   display: block;
   width: 100%;
   margin: 1.25em 0;
@@ -241,7 +296,7 @@ body {
 .overview-today .overview-card .name {
   margin: 2em 0 1em 0;
 }
-.overview-today .overview-card .text, .overview-today .overview-card .text-sm, .overview-today .overview-card .toggle-text {
+.overview-today .overview-card .text, .overview-today .overview-card .text-sm, .overview-today .overview-card .toggle-text, .overview-today .overview-card .overview-all .name, .overview-all .overview-today .overview-card .name {
   display: inline-block;
   font-weight: 600;
   margin: 0;
@@ -255,6 +310,11 @@ body {
   font-size: 2em;
   font-weight: 600;
   margin: 0.5em 0;
+  transition: 400ms ease all;
+}
+.overview-today .overview-card .number.dark {
+  color: white !important;
+  transition: 400ms ease all;
 }
 
 /*# sourceMappingURL=custom.css.map */

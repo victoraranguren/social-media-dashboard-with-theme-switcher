@@ -1,5 +1,43 @@
-@mixin mq($mq, $size){
-  @media screen and (min-width:map-get($mq, $size)){
+@mixin mq($mq, $size) {
+  @media screen and (min-width: map-get($mq, $size)) {
     @content;
   }
 }
+@mixin dark($color) {
+  transition: 400ms ease all;
+  @if $color {
+    // For titles and counters
+    @if $color == $dark-grayish-blue {
+      &.dark {
+        color: $desaturated-blue;
+        transition: 400ms ease all;
+      }
+    }
+    // For titles and counters
+    @if $color == $very-dark-blue {
+      &.dark {
+        color: $white;
+        transition: 400ms ease all;
+      }
+    }
+  }
+}
+@mixin dark-force($forced-color) {
+  transition: 400ms ease all;
+  @if $forced-color {
+    &.dark{
+      color: $forced-color!important;
+      transition: 400ms ease all;
+    }
+  }
+}
+@mixin dark-force-bg($forced-color) {
+  transition: 400ms ease all;
+  @if $forced-color {
+    &.dark{
+      background: $forced-color!important;
+      transition: 400ms ease all;
+    }
+  }
+}
+

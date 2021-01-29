@@ -2,37 +2,47 @@
 @import "_mixins/mixins";
 @import "_utilities/utilities";
 
-*{
+* {
   box-sizing: border-box;
 }
-body{
-  font-family: 'Inter', 'Open Sans', sans-serif;
+body {
+  font-family: "Inter", "Open Sans", sans-serif;
   font-weight: 400;
   overflow-x: hidden;
+  @include dark-force-bg($very-dark-blue);
 }
 // Header
-.header{
+.header {
   display: flex;
   flex-direction: column;
   background: $very-pale-blue;
   padding-bottom: 3em;
   border-bottom-right-radius: 1.75em;
   border-bottom-left-radius: 1.75em;
-  .container{
+  transition: 400ms ease all;
+  &.dark {
+    background: $very-dark-blue-top;
+    transition: 400ms ease all;
+  }
+  @include mq($mq, md) {
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+  }
+  .container {
     @extend .header;
   }
 }
 // Toggle
-.toggle{
+.toggle {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  &-text{
+  &-text {
     @extend .text;
     font-weight: 700;
     text-decoration: none;
   }
-  &-btn{
+  &-btn {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -41,13 +51,13 @@ body{
     border-radius: 3em;
     background: $toggle;
     transition: 400ms ease all;
-    &.active{
+    &.active {
       justify-content: flex-start;
       background: $toggle-active;
       transition: 400ms ease all;
     }
   }
-  &-ball{
+  &-ball {
     display: inline-block;
     height: 1.5em;
     width: 1.5em;
@@ -55,25 +65,25 @@ body{
     background: $very-pale-blue;
     border-radius: 50%;
     transition: 400ms ease all;
-    &.active{
+    &.active {
       background: $very-dark-blue;
       transition: 400ms ease all;
     }
   }
 }
 // Main
-.main{
+.main {
   @extend .container;
 }
 // Overview
-.overview{
+.overview {
   display: flex;
   flex-direction: column;
-  @include mq($mq, md){
-    flex-direction: row;  
+  @include mq($mq, md) {
+    flex-direction: row;
     justify-content: space-between;
   }
-  .overview-card-template{
+  .overview-card-template {
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -82,29 +92,30 @@ body{
     border-radius: 8px;
     padding-bottom: 1em;
     margin-bottom: 1.75em;
-    .resume-day-template{
+    @include dark-force-bg($dark-desaturated-blue);
+    .resume-day-template {
       display: flex;
       justify-content: center;
       align-items: center;
-      .counter-day{
+      .counter-day {
         display: inline-block;
         font-weight: 600;
         color: $lime-green;
-        margin-left: .25em;
+        margin-left: 0.25em;
       }
-      .arrow{
+      .arrow {
         display: inline-block;
-        width: .5em;
+        width: 0.5em;
         height: auto;
       }
     }
   }
   // Overview All
-  &-all{
+  &-all {
     @extend .overview;
     position: relative;
     top: -3em;
-    .overview-card{
+    .overview-card {
       @extend .overview-card-template;
       display: flex;
       text-align: center;
@@ -114,125 +125,129 @@ body{
       border-radius: 8px;
       padding-bottom: 1em;
       margin-bottom: 1.75em;
-      @include mq($mq, md){
+      @include mq($mq, md) {
         width: 23%;
       }
     }
-    .account{
+    .account {
       display: flex;
       align-items: center;
       margin: 2em auto 1.25em auto;
       line-height: 1em;
       text-decoration: none;
     }
-    .icon{
+    .icon {
       display: inline-block;
       width: auto;
       height: 100%;
     }
-    .name{
+    .name {
+      @extend .text;
       display: inline-block;
       margin: 0;
-      margin-left: .75em;
+      margin-left: 0.75em;
       text-decoration: none;
-      color: $dark-grayish-blue;
       font-weight: 600;
+      // color: $dark-grayish-blue;
+      // @include dark($dark-grayish-blue);
     }
-    .counter{
+    .counter {
       font-size: 4em;
       font-weight: 700;
       margin: 0;
+      @include dark-force($white);
     }
-    .followers{
+    .followers {
       font-size: 1em;
       font-weight: 300;
-      letter-spacing: .25em;
+      letter-spacing: 0.25em;
       text-transform: uppercase;
+      @include dark-force($desaturated-blue);
     }
-    .resume-day{
+    .resume-day {
       @extend .resume-day-template;
     }
-    .facebook{
+    .facebook {
       display: inline-block;
       width: 100%;
-      height: .35rem;
-      background:$facebook;
-      border-top-left-radius:1em;
-      border-top-right-radius:1em;
+      height: 0.35rem;
+      background: $facebook;
+      border-top-left-radius: 1em;
+      border-top-right-radius: 1em;
     }
-    .instagram{
+    .instagram {
       display: inline-block;
       width: 100%;
-      height: .35rem;
-      background:$instagram;
-      border-top-left-radius:1em;
-      border-top-right-radius:1em;
+      height: 0.35rem;
+      background: $instagram;
+      border-top-left-radius: 1em;
+      border-top-right-radius: 1em;
     }
-    .twitter{
+    .twitter {
       display: inline-block;
       width: 100%;
-      height: .35rem;
-      background:$twitter;
-      border-top-left-radius:1em;
-      border-top-right-radius:1em;
+      height: 0.35rem;
+      background: $twitter;
+      border-top-left-radius: 1em;
+      border-top-right-radius: 1em;
     }
-    .youtube{
+    .youtube {
       display: inline-block;
       width: 100%;
-      height: .35rem;
-      background:$youtube;
-      border-top-left-radius:1em;
-      border-top-right-radius:1em;
+      height: 0.35rem;
+      background: $youtube;
+      border-top-left-radius: 1em;
+      border-top-right-radius: 1em;
     }
   }
   // Overview Today
-  &-today{
+  &-today {
     @extend .overview;
     position: relative;
     top: -3em;
-    @include mq($mq, md){
-      flex-direction: row;  
+    @include mq($mq, md) {
+      flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
     }
-    h2{
+    .title {
       display: block;
       width: 100%;
-      @extend .color-gray;
       margin: 1.25em 0;
       font-size: 1.5em;
     }
-    .overview-card{
+    .overview-card {
       @extend .overview-card-template;
       padding: 0 1.75em;
-      @include mq($mq, md){
+      @include mq($mq, md) {
         width: 23%;
       }
-      > div{
+      > div {
         display: flex;
         justify-content: space-between;
         align-items: center;
       }
-      .name{
+      .name {
         margin: 2em 0 1em 0;
       }
-      .text{
+      .text {
         display: inline-block;
         font-weight: 600;
         margin: 0;
       }
-      .icon{
+      .icon {
         display: inline-block;
         width: auto;
         height: 100%;
       }
-      .resume-day{
+      .resume-day {
         @extend .resume-day-template;
       }
-      .number{
+      .number {
         font-size: 2em;
         font-weight: 600;
-        margin: .5em 0;
+        margin: 0.5em 0;
+        @include dark-force($white);
       }
     }
   }

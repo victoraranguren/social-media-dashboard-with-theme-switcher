@@ -40,10 +40,11 @@ body{
     height: 2em;
     border-radius: 3em;
     background: $toggle;
-    transition: 500ms ease all;
+    transition: 400ms ease all;
     &.active{
       justify-content: flex-start;
-      transition: 500ms ease all;
+      background: $toggle-active;
+      transition: 400ms ease all;
     }
   }
   &-ball{
@@ -53,7 +54,11 @@ body{
     margin: 0 5px;
     background: $very-pale-blue;
     border-radius: 50%;
-    transition: 500ms ease all;
+    transition: 400ms ease all;
+    &.active{
+      background: $very-dark-blue;
+      transition: 400ms ease all;
+    }
   }
 }
 // Main

@@ -113,22 +113,24 @@ body.dark {
   transition: 400ms ease all;
 }
 .toggle-btn.active {
-  justify-content: flex-start;
   background: linear-gradient(to right, #378fe6, #3eda82);
   transition: 400ms ease all;
 }
 .toggle-ball {
+  position: relative;
+  left: 0;
   display: inline-block;
   height: 1.5em;
   width: 1.5em;
   margin: 0 5px;
   background: #f5f7ff;
   border-radius: 50%;
-  transition: 400ms ease all;
+  transition: 500ms ease all;
 }
 .toggle-ball.active {
   background: #1e202a;
-  transition: 400ms ease all;
+  left: -1.9em;
+  transition: 500ms ease all;
 }
 
 .overview, .overview-today, .overview-all {

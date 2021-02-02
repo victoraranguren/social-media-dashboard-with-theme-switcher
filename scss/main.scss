@@ -52,22 +52,24 @@ body {
     background: $toggle;
     transition: 400ms ease all;
     &.active {
-      justify-content: flex-start;
       background: $toggle-active;
       transition: 400ms ease all;
     }
   }
   &-ball {
+    position: relative;
+    left: 0;
     display: inline-block;
     height: 1.5em;
     width: 1.5em;
     margin: 0 5px;
     background: $very-pale-blue;
     border-radius: 50%;
-    transition: 400ms ease all;
+    transition: 500ms ease all;
     &.active {
       background: $very-dark-blue;
-      transition: 400ms ease all;
+      left: -1.9em;
+      transition: 500ms ease all;
     }
   }
 }

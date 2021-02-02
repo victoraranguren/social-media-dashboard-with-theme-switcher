@@ -9,9 +9,7 @@ const switchTheme = () => {
     ".title",
     ".title-sm",
     ".toggle-text",
-    'body'
-  ];
-  const classArrayAll = [
+    'body',
     ".name",
     '.text',
     '.followers',
@@ -20,9 +18,6 @@ const switchTheme = () => {
     '.overview-card'
   ];
   classArray.forEach((el) => {
-    document.querySelector(`${el}`).classList.toggle("dark");
-  });
-  classArrayAll.forEach((el) => {
     document.querySelectorAll(`${el}`).forEach(el=>el ? el.classList.toggle("dark") : false);
   });
   btnToggle.classList.toggle("active");
